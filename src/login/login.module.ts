@@ -10,7 +10,7 @@ import { LoginService } from './login.service.js';
 
 @Module({
   imports: [
-    PrismaModule,
+  PrismaModule,
 
     JwtModule.registerAsync({
       inject: [ConfigService],
@@ -29,5 +29,6 @@ import { LoginService } from './login.service.js';
   controllers: [LoginController],
 
   providers: [LoginService],
+  exports:[JwtModule]
 })
 export class LoginModule {}

@@ -29,6 +29,7 @@ LoginModule = __decorate([
         ],
         controllers: [LoginController],
         providers: [LoginService],
+        exports: [JwtModule]
     })
 ], LoginModule);
 export { LoginModule };
